@@ -1,6 +1,6 @@
 
 module Account
-  class AppointmentController < ApplicationController
+  class AppointmentsController < ApplicationController
 
     def index
       @appointments = current_user.appointments
@@ -20,8 +20,8 @@ module Account
     end
 
     def destroy
-      @girlfriend = @current_user.girlfriends.find(params[:id])
-      @girlfriend.destroy
+      @appointment = @current_user.appointments.find(params[:id])
+      @appointment.destroy
       redirect_to root_path
     end
 
