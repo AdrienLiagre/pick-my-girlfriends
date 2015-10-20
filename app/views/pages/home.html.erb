@@ -1,1 +1,29 @@
-<h1>Air Bnb</h1>
+
+
+  <h1> Pick your girl </h1>
+  <p> Welcome to our cheaters community </p>
+
+  <div class='text-center'>
+  </div>
+
+  <h2>Girlfriends</h2>
+
+  <div class="container">
+    <% @girlfriends.each do |girlfriend| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" >
+        <span class="card-bg" style="background-image: url(<%= image_path(girlfriend.picture) %>)"></span>
+        <span class="card-shadow"></span>
+        <span class="card-text">
+          <h2><%= girlfriend.name %></h2>
+          <p><%= girlfriend.location %></p>
+        </span>
+      </div>
+    </div>
+
+    <%end %>
+  </div>
+
+
+
+
