@@ -1,0 +1,10 @@
+<div class='text-center'>
+  <h1>  Here are all your appointments </h1>
+  <% @appointments.each do |appointment| %>
+    <ul>
+      <li><%= appointment.appointment_on %></li>
+      <li> With <%= appointment.girlfriend.name %> </li>
+    </ul>
+    <p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %>
+  <% end %>
+</div>
