@@ -13,7 +13,5 @@ class CreateGirlfriends < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-
-    # add_foreign_key :girlfriends, :users, column: :pimp_id
   end
 end
