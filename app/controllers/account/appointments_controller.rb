@@ -20,7 +20,7 @@ module Account
     end
 
     def destroy
-      @appointment = @current_user.appointments.find(params[:id])
+      @appointment = current_user.appointments.find(params[:id])
       @appointment.destroy
       redirect_to root_path
     end
