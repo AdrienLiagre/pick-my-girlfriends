@@ -1,0 +1,21 @@
+<%= simple_form_for([:account, @girlfriend]) do |f| %>
+<%= f.error_notification %>
+<div class="container">
+  <div class="row">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :age %>
+    <%= f.input :location %>
+    <%= f.input :availability %>
+    <%= f.input :nationality %>
+    <%= f.input :job %>
+
+
+    <%= f.button :submit %>
+  </div>
+</div>
+<% end %>
+
+
+
