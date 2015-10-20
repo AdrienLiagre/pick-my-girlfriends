@@ -18,7 +18,7 @@ module Account
       @girlfriend = current_user.girlfriends.new(girlfriend_params)
 
       if @girlfriend.save
-        redirect_to girlfriend_path(@girlfriend)
+        redirect_to account_girlfriend_path(@girlfriend)
       else
         render :new
       end
@@ -27,7 +27,7 @@ module Account
     def destroy
       @girlfriend = current_user.girlfriends.find(params[:id])
       @girlfriend.destroy
-      redirect_to girlfriends_path
+      redirect_to account_girlfriends_path
     end
 
   private

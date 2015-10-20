@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :girlfriends, only: [:index, :show]
 
   namespace :account do
-    resources :girlfriends, only: [:index, :new, :create]
+    resources :girlfriends, only: [:index, :show, :new, :create]
   end
 end
