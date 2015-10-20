@@ -1,4 +1,4 @@
-<%= simple_form_for([:account, @girlfriend]) do |f| %>
+<%= simple_form_for([:account, @girlfriend], html: { multipart: true }) do |f| %>
 <%= f.error_notification %>
 <div class="container">
   <div class="row">
@@ -10,6 +10,7 @@
     <%= f.input :availability %>
     <%= f.input :nationality %>
     <%= f.input :job %>
+    <%= f.input :picture %>
 
 
     <%= f.button :submit %>
