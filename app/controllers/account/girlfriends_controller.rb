@@ -6,39 +6,41 @@ module Account
     end
 
     def show
+      @girlfriend = current_user.girlfriends.find(params[:id])
     end
 
 
     def new
-     @cocktail = Cocktail.new
-   end
-
-   def create
-    @cocktail = Cocktail.new(cocktail_params)
-    if @cocktail.save
-      redirect_to cocktails_path(@cocktail)
-    else
-      render :new
+     @girlfriend = current_user.girlfriends.new
     end
-  end
 
-  def destroy
+    def create
+      @girlfriend = current_user.girlfriends.new(girlfriend_params)
 
-    @cocktail.destroy
-    redirect_to cocktails_path
-  end
+      if @girlfriend.save
+        redirect_to girlfriend_path(@girlfriend)
+      else
+        render :new
+      end
+    end
+
+    def destroy
+      @girlfriend = current_user.girlfriends.find(params[:id])
+      @girlfriend.destroy
+      redirect_to girlfriends_path
+    end
 
   private
 
-  def cocktail_params
-    params.require(:cocktail).permit(:name, :picture)
+    def girlfriend_params
+      params.require(:girlfriend).permit(:name, :description, :price, :age, :location, :availability, :nationality, :picture, :job)
+    end
+
+
+  # def pimp_id
+  #   @pimp = Users.find(params[:id])
+  # end
+
   end
-
-
-  def pimp_id
-    @pimp = Users.find(params[:id])
-  end
-
-end
 
 end
