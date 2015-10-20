@@ -36,9 +36,12 @@ ActiveRecord::Schema.define(version: 20151020092421) do
     t.string   "location"
     t.string   "nationality"
     t.string   "job"
+    t.integer  "pimp_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
+
+  add_index "girlfriends", ["pimp_id"], name: "index_girlfriends_on_pimp_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "appointment_id"

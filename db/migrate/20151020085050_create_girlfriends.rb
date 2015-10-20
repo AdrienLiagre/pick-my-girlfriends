@@ -9,8 +9,11 @@ class CreateGirlfriends < ActiveRecord::Migration
       t.string :location
       t.string :nationality
       t.string :job
+      t.integer :pimp_id, index: true
 
       t.timestamps null: false
     end
+
+    # add_foreign_key :girlfriends, :users, column: :pimp_id
   end
 end
