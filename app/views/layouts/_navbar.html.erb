@@ -38,7 +38,7 @@
     <hr>
 
     <% if user_signed_in? %>
-      <%= link_to 'Profile', account_girlfriends_path ,class: "navbar-wagon-item navbar-wagon-button btn" %>
+      <%= link_to 'Profile', account_dashboard_path ,class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% else %>
       <%= link_to 'Check our girls', girlfriends_path ,class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% end %>
