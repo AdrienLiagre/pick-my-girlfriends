@@ -1,49 +1,32 @@
 <div class="container text-center ">
   <div class="row">
-
-
     <% current_user.girlfriends.each do |girlfriend| %>
     <div class="container text-center ">
       <div class="row">
-
-
         <%= girlfriend.name %>
-
       </div>
     </div>
-
-
-
     <div class="container text-center ">
       <div class="row">
-
         <%= girlfriend.price %>
-
       </div>
     </div>
-
-
     <div class="container text-center ">
       <div class="row">
-
         <%= girlfriend.age %>
-
       </div>
     </div>
-
-
-
     <div class="container text-center ">
       <div class="row">
-
         <%= girlfriend.location %>
-
       </div>
     </div>
-
-
+    <div class="container text-center ">
+      <div class="row">
+        <%= image_tag girlfriend.picture %>
+      </div>
+    </div>
     <% end %>
-
   </div>
 </div>
 
