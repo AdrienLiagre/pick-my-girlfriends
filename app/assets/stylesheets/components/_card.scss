@@ -11,7 +11,7 @@
   z-index: 0;
   width: 100%;
   background-size: cover;
-  background-color: #86afde;
+  background-image: image-url("sonia.jpg");
 }
 
 .card-description,
@@ -19,11 +19,11 @@
 .card-user {
   position: absolute;
   z-index: 1;
-  color: #FFFFFF;
+  color: white;
 }
 
 .card-text {
-  bottom: 0;
+  bottom: 10;
   left: 5px;
 }
 
