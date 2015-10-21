@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :girlfriends, only: [:index, :show]
 
   namespace :account do
+    resource :dashboard, only: :show, controller: 'dashboard'
     resources :girlfriends, only: [:index, :show, :new, :create]
   end
 end
