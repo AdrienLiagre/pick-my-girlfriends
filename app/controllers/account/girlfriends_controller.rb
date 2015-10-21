@@ -3,6 +3,7 @@ module Account
 
     def index
       @girlfriends = current_user.girlfriends
+      @user_name = current_user.email
     end
 
     def show

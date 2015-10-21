@@ -8,7 +8,7 @@
     <div class="navbar-wagon-pusher"></div>
 
     <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Looking for something ?">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
@@ -34,6 +34,11 @@
       </div>
     </div>
     <hr>
-    <a href="" class="navbar-wagon-item navbar-wagon-button btn">Post stuff</a>
+
+    <% if user_signed_in? %>
+      <%= link_to 'Profile', account_girlfriends_path ,class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% else %>
+      <%= link_to 'Check our girls', girlfriends_path ,class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% end %>
   </div>
 </nav>
