@@ -2,14 +2,11 @@ module Account
   class GirlfriendsController < ApplicationController
 
     def index
-      @girlfriends = current_user.girlfriends
-      @user_name = current_user.email
     end
 
     def show
       @girlfriend = current_user.girlfriends.find(params[:id])
     end
-
 
     def new
      @girlfriend = current_user.girlfriends.new
