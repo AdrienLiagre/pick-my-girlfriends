@@ -13,10 +13,9 @@
   <div class="container">
     <% @girlfriends.each do |girlfriend| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" >
-          <span class="card-bg" ></span>
+        <div class="card text-center" >
           <span class="card-shadow"></span>
-          <span class="card-text">
+          <span class="card-text card-bg">
             <h2><%= girlfriend.name %></h2>
             <p><%= girlfriend.location %></p>
           </span>
