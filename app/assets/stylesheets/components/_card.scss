@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  height: 75px;
+  margin: 10px 0;
+}
+
+.card-bg {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  background-size: cover;
+  background-color: #86afde;
+}
+
+.card-description,
+.card-text,
+.card-user {
+  position: absolute;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.card-text {
+  bottom: 0;
+  left: 5px;
+}
+
+.card-user {
+  right: 5px;
+  top: 5px;
+}
+
+.card-description {
+  left: 5px;
+  top: 5px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.card-link:hover {
+  background-color: rgba(0,0,0,0.4);
+}

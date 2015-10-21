@@ -25,8 +25,20 @@
 
     <%= render "devise/shared/links" %>
   </div>
+
   <div class="teaser col-md-6">
-    <%= "We are gonna put some pictures here" %>
+    <% top_3_girlfriends.each do |girlfriend| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" >
+          <span class="card-bg"></span>
+          <span class="card-shadow"></span>
+          <span class="card-text">
+            <h2><%= girlfriend.name %></h2>
+            <p><%= girlfriend.location %></p>
+          </span>
+        </div>
+      </div>
+    <%end %>
   </div>
 
 </div>
