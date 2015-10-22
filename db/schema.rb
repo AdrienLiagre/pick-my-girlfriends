@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021091235) do
+ActiveRecord::Schema.define(version: 20151022115713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20151021091235) do
     t.integer  "price"
     t.integer  "age"
     t.boolean  "availability",         default: true
-    t.string   "location"
     t.string   "nationality"
     t.string   "job"
     t.integer  "pimp_id"
@@ -43,6 +42,11 @@ ActiveRecord::Schema.define(version: 20151021091235) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "street"
+    t.string   "postcode"
+    t.string   "city"
   end
 
   add_index "girlfriends", ["pimp_id"], name: "index_girlfriends_on_pimp_id", using: :btree
