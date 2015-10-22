@@ -12,9 +12,11 @@ module Account
     end
 
     def create
+      @girlfriend = Girlfriend.find(params[:girlfriend_id])
       @appointment = current_user.appointments.new(appoint_params)
+      @appointment.girlfriend = @girlfriend
       if @appointment.save
-        redirect_to root_path
+        redirect_to account_appointments_path
       else
         render :new
       end
@@ -30,6 +32,7 @@ module Account
 
     def appoint_params
       params.require(:appointment).permit(:appointment_on)
+
     end
   end
 end

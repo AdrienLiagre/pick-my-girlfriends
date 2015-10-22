@@ -1,5 +1,7 @@
 class Girlfriend < ActiveRecord::Base
   belongs_to :pimp, class_name: "User", foreign_key: 'pimp_id'
+  has_many :appointments
+
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :picture,

@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :girlfriends, only: [:index, :show, :new, :create, :destroy] do
       resources :appointments, only: [:new, :create]
     end
-    resources :appointments, only: [:index, :show, :destroy]
+    resources :appointments, only: [:index, :show, :new, :create, :destroy]
   end
 end
