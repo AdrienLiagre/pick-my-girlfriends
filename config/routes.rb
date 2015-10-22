@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :girlfriends, only: [:index, :show]
+  resources :girlfriends, only: [:index, :show, :destroy]
 
   namespace :account do
     resource :dashboard, only: :show, controller: 'dashboard'
-    resources :girlfriends, only: [:index, :show, :new, :create]
+    resources :girlfriends, only: [:index, :show, :new, :create, :destroy]
   end
 end

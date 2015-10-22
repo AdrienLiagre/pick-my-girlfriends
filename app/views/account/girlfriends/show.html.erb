@@ -10,6 +10,8 @@
     <%= @girlfriend.nationality %>
     <%= @girlfriend.job %>
     <%= image_tag @girlfriend.picture.url(:medium) %>
+    <%= link_to "delete this girl", account_girlfriend_path, method: :delete, class: "btn btn-primary"  %>
+    <%= link_to "back to profile", account_dashboard_path, class: "btn btn-primary"  %>
 
     <br>
     <br>
