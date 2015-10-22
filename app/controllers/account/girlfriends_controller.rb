@@ -31,7 +31,7 @@ module Account
   private
 
     def girlfriend_params
-      params.require(:girlfriend).permit(:name, :description, :price, :age, :location, :availability, :nationality, :picture, :job)
+      params.require(:girlfriend).permit(:name, :description, :price, :age, :street, :city, :postcode, :availability, :nationality, :picture, :job)
     end
 
 
