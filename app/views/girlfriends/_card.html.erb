@@ -7,5 +7,14 @@
   <div class="card-price">
     <p><%= girlfriend.price %> € </p>
   </div>
-  <%= link_to '', girlfriend_path(girlfriend), class: "card-link" %>
+
+  <% if user_signed_in? %>
+    <% if current_user.id == girlfriend.pimp_id %>
+    <%= link_to '', account_girlfriend_path(girlfriend), class: "card-link" %>
+    <% else %>
+    <%= link_to '', girlfriend_path(girlfriend), class: "card-link" %>
+    <% end %>
+  <% else %>
+    <%= link_to '', girlfriend_path(girlfriend), class: "card-link" %>
+  <% end %>
 </div>
