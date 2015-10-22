@@ -10,7 +10,9 @@
     <%= @girlfriend.availability %>
     <%= @girlfriend.nationality %>
     <%= @girlfriend.job %>
-    <%= @girlfriend.picture %>
+    <%= image_tag @girlfriend.picture %>
+
+    <%= link_to "book me", new_account_girlfriend_appointment_path(@girlfriend), class: "btn btn-primary"  %>
     <br>
     <br>
   </div>
