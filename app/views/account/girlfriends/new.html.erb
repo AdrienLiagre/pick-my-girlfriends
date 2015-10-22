@@ -1,21 +1,23 @@
 <%= simple_form_for([:account, @girlfriend], html: { multipart: true }) do |f| %>
-<%= f.error_notification %>
-<div class="container">
-  <div class="row">
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :price %>
-    <%= f.input :age %>
-    <%= f.input :location %>
-    <%= f.input :availability %>
-    <%= f.input :nationality %>
-    <%= f.input :job %>
-    <%= f.input :picture %>
+  <%= f.error_notification %>
+  <div class="container">
+    <div class="row">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :age %>
+      <%= f.input :street %>
+      <%= f.input :postcode %>
+      <%= f.input :city %>
+      <%= f.input :availability %>
+      <%= f.input :nationality %>
+      <%= f.input :job %>
+      <%= f.input :picture %>
 
 
-    <%= f.button :submit %>
+      <%= f.button :submit %>
+    </div>
   </div>
-</div>
 <% end %>
 
 

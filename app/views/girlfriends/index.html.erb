@@ -1,9 +1,24 @@
 <h1 class="text-center">Liste des Girlfriends</h1>
 
   <div class="container">
-      <% @girlfriends.each do |girlfriend| %>
-        <div class="col-xs-12 col-sm-4">
-        <%= render "girlfriends/card", girlfriend: girlfriend %>
-        </div>
-      <% end %>
+    <% @girlfriends.each do |girlfriend| %>
+      <div class="col-xs-12 col-sm-4">
+      <%= render "girlfriends/card", girlfriend: girlfriend %>
+      </div>
+    <% end %>
   </div>
+
+  <div id="map" style="width: 100%; height: 300px;"></div>
+
+  <% content_for(:after_js) do %>
+    <%= javascript_tag do %>
+      $(document).on('ready', function() {
+        handler = Gmaps.build('Google');
+        handler.buildMap({ internal: { id: 'map' } }, function(){
+          markers = handler.addMarkers(<%= raw @markers.to_json %>);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+        });
+      })
+    <% end %>
+  <% end %>
