@@ -4,9 +4,10 @@ class GirlfriendsController < ApplicationController
   def index
     @girlfriends = Girlfriend.all
 
-    @markers = Gmaps4rails.build_markers(@girlfriends) do |girlfriend, marker|
+    @hash = Gmaps4rails.build_markers(@girlfriends) do |girlfriend, marker|
       marker.lat girlfriend.latitude
       marker.lng girlfriend.longitude
+      marker.infowindow render_to_string(:partial => "/girlfriends/map_box", locals: {girlfriend: girlfriend})
     end
   end
 
