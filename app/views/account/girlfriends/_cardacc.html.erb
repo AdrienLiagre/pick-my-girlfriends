@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-bg" style="background-image:url(<%= girlfriend.picture.url%>)"></div>
+  <span class="card-gradient"></span>
+   <span class="card-text">
+    <h2><%= girlfriend.name %> - <%= girlfriend.age %></h2>
+    <p><%= girlfriend.price %> € </p>
+  </span>
+  <%= link_to '', account_girlfriend_path(girlfriend), class: "card-link" %>
+</div>

@@ -1,32 +1,9 @@
-<div class="container text-center ">
-  <div class="row">
-    <% current_user.girlfriends.each do |girlfriend| %>
-    <div class="container text-center ">
-      <div class="row">
-        <%= link_to girlfriend.name, account_girlfriend_path(girlfriend) %>
-      </div>
-    </div>
-    <div class="container text-center ">
-      <div class="row">
-        <%= girlfriend.price %>
-      </div>
-    </div>
-    <div class="container text-center ">
-      <div class="row">
-        <%= girlfriend.age %>
-      </div>
-    </div>
-    <div class="container text-center ">
-      <div class="row">
-        <%= girlfriend.location %>
-      </div>
-    </div>
-    <div class="container text-center ">
-      <div class="row">
-        <%= image_tag girlfriend.picture %>
-      </div>
-    </div>
+<h1 class="text-center">All your girlfriends</h1>
 
+<div class="container" >
+    <% current_user.girlfriends.each do |girlfriend| %>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+      <%= render "account/girlfriends/cardacc", girlfriend: girlfriend %>
     <% end %>
   </div>
 </div>
