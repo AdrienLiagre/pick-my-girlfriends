@@ -1,11 +1,9 @@
 
 
 <div class="container">
-  <div class="row col-sm-12 col-md-6">
-    <h3> summary statement</h3>
-
-    <h4> You chose to have a date with  <strong><%= @girlfriend.name %></strong> </h4>
-    <ul>
+  <div class="row col-sm-12 col-md-6 text-center">
+    <ul style="list-style: none;">
+      <li> <h4> You chose to have a date with  <strong><%= @girlfriend.name %></strong> </h4></li>
       <li><%= @girlfriend.description %></li>
       <li><%= @girlfriend.price %> dollars </li>
       <li><%= @girlfriend.age %> years old </li>
@@ -16,20 +14,15 @@
     </ul>
   </div>
 
-<div class="col-sm-12 col-md-6">
-<h2> choose your date </h2>
-<%= simple_form_for([:account, @girlfriend, @appointment], html: { multipart: true }) do |f| %>
-<%= f.error_notification %>
-<div class="container">
-  <div class="row">
+  <div class="col-sm-12 col-md-6 text-center">
+    <h2> choose your date </h2>
+    <%= simple_form_for([:account, @girlfriend, @appointment], html: { multipart: true }) do |f| %>
+    <%= f.error_notification %>
     <%= f.input :appointment_on %>
     <%= f.button :submit %>
-  </div>
-</div>
-<% end %>
+    <% end %>
 </div>
 </div>
-
 
 
 
