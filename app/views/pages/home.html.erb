@@ -12,16 +12,16 @@
 
   <div class="container">
     <% @girlfriends.each do |girlfriend| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card text-center" >
-          <span class="card-shadow"></span>
-          <span class="card-text" <%= image_tag girlfriend %>>
-            <h2><%= girlfriend.name %></h2>
-            <p><%= girlfriend.location %></p>
-
-          </span>
-        </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card text-center" >
+        <span class="card-shadow"></span>
+        <div class="card-bg" style="background-image:url(<%= girlfriend.picture.url (:medium) %>)"></div>
+        <span class="card-text">
+          <h2><%= girlfriend.name %></h2>
+          <p><%= girlfriend.location %></p>
+        </span>
       </div>
+    </div>
     <%end %>
   </div>
 </div>
