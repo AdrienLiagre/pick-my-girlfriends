@@ -12,7 +12,7 @@ class Girlfriend < ActiveRecord::Base
     content_type: /\Aimage\/.*\z/
 
   def full_address
-    return "#{street}, #{postcode}, #{city}"
+    return "#{street}, #{postcode}, #{city}, France"
   end
 
   def full_address_changed?
