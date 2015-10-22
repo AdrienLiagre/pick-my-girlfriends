@@ -7,6 +7,7 @@ module Account
     end
 
     def new
+      @girlfriend = Girlfriend.find(params[:girlfriend_id])
       @appointment = Appointment.new
     end
 

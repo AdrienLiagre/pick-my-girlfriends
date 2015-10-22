@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   namespace :account do
     resource :dashboard, only: :show, controller: 'dashboard'
-    resources :girlfriends, only: [:index, :show, :new, :create, :destroy]
+    resources :girlfriends, only: [:index, :show, :new, :create, :destroy] do
+      resources :appointments, only: [:new, :create]
+    end
+    resources :appointments, only: [:index, :show, :destroy]
   end
 end
