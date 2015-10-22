@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
   has_many :girlfriends, foreign_key: 'pimp_id'
-  has_many :appointments
+  has_many :appointments, foreign_key: 'client_id'
 
 
    def self.find_for_facebook_oauth(auth)

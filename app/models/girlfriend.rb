@@ -1,5 +1,6 @@
 class Girlfriend < ActiveRecord::Base
   belongs_to :pimp, class_name: "User", foreign_key: 'pimp_id'
+  has_many :appointments
 
   geocoded_by :full_address
   after_validation :geocode, if: :full_address_changed?
