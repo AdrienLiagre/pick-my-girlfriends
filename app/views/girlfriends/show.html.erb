@@ -1,21 +1,27 @@
-<div class="container text-center ">
-  <div class="row">
-
-    <%= @girlfriend.name %>
-    <%= @girlfriend.description %>
-    <%= @girlfriend.price %>
-    <%= @girlfriend.age %>
-    <%= @girlfriend.city %>
-    <%= @girlfriend.street %>
-    <%= @girlfriend.availability %>
-    <%= @girlfriend.nationality %>
-    <%= @girlfriend.job %>
-    <%= image_tag @girlfriend.picture %>
-
-    <%= link_to "book me", new_account_girlfriend_appointment_path(@girlfriend), class: "btn btn-primary"  %>
-    <br>
-    <br>
+<div class="container">
+  <div class="row col-sm-12 col-md-6 text-center">
+      <%= image_tag @girlfriend.picture (:medium) %>
   </div>
+
+  <div class="row col-sm-12 col-md-6 text-center">
+    <ul style="list-style: none;">
+      <li><strong><%= @girlfriend.name %></strong></li>
+      <li><%= @girlfriend.description %></li>
+      <li><%= @girlfriend.price %> dollars </li>
+      <li><%= @girlfriend.age %> years old </li>
+      <li><%= @girlfriend.city %></li>
+      <li><%= @girlfriend.street %></li>
+      <li><%= @girlfriend.availability %></li>
+      <li><%= @girlfriend.nationality %></li>
+      <li><%= @girlfriend.job %></li>
+  <br>
+      <li><%= link_to "book me", new_account_girlfriend_appointment_path(@girlfriend), class: "btn btn-danger btn-lg"  %></li>
+    </ul>
+
+  </div>
+
+
+
 </div>
 
 
