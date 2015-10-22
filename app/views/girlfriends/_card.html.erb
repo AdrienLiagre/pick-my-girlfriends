@@ -1,11 +1,8 @@
 <div class="card">
-  <span class="card-bg" style="background-image:url('https://unsplash.it/600/300?image=3')"></span>
+  <div class="card-bg" style="background-image:url(<%= girlfriend.picture.url%>)"></div>
   <span class="card-gradient"></span>
-  <span class="card-text">
+   <span class="card-text">
     <h2><%= girlfriend.name %></h2>
   </span>
-  <span class="card-user">
-    <a href="#ex1" rel="modal:open">
-    </a>
-  </span>
+  <%= link_to '', girlfriend_path(girlfriend), class: "card-link" %>
 </div>
