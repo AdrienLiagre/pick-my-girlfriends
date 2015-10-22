@@ -1,16 +1,9 @@
 <h1 class="text-center">Liste des Girlfriends</h1>
 
-<div class="container">
-  <div class="row">
-    <% @girlfriends.each do |girlfriend| %>
-    <div class="col-xs-12 col-sm-4">
-      <%= render "girlfriends/card",girlfriend: girlfriend %>
-    </div>
-    <% end %>
+  <div class="container">
+      <% @girlfriends.each do |girlfriend| %>
+        <div class="col-xs-12 col-sm-4">
+        <%= render "girlfriends/card", girlfriend: girlfriend %>
+        </div>
+      <% end %>
   </div>
-</div>
-<br>
-<br>
-<br>
-<h3 class="text-center">
-</h3>
