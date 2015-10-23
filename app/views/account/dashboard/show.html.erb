@@ -27,7 +27,7 @@
           <ul style="list-style: none;">
             <li><%= appointment.appointment_on %></li>
             <li> With <%= appointment.girlfriend.name %> </li>
-            <li><p> <%= link_to 'Check her profile again !', account_girlfriend_path(appointment.girlfriend) %></li>
+            <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
             </ul>
         <% end %>
       <% end %>
@@ -38,7 +38,7 @@
           <ul style="list-style: none;">
             <li><%= appointment.appointment_on %></li>
             <li> With <%= appointment.girlfriend.name %> </li>
-            <li><p> <%= link_to 'Check her profile again !', account_girlfriend_path(appointment.girlfriend) %></li>
+            <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
           </ul>
         <% end %>
         <% end %>
