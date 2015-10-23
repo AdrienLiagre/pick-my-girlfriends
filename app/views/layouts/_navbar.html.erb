@@ -7,22 +7,7 @@
 
     <div class="navbar-wagon-pusher"></div>
 
-    <form action="/girlfriends" class="navbar-wagon-search hidden-xs">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Where do you need company ?">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-
     <hr class="hidden-xs hidden-sm">
-
-    <a href="" class="navbar-wagon-item navbar-wagon-link">
-      <div class="icon-badge-container">
-        <i class="fa fa-envelope-o"></i>
-        <div class="icon-badge icon-badge-blue">3</div>
-      </div>
-    </a>
-    <hr>
 
     <% if user_signed_in? %>
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-button btn" %>
