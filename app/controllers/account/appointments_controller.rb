@@ -1,4 +1,3 @@
-
 module Account
   class AppointmentsController < ApplicationController
 
@@ -12,13 +11,25 @@ module Account
     end
 
     def create
+      date = {
+        day: params[:appointment]["appointment_on(3i)"].to_i,
+        month: params[:appointment]["appointment_on(2i)"].to_i,
+        year: params[:appointment]["appointment_on(1i)"].to_i
+      }
       @girlfriend = Girlfriend.find(params[:girlfriend_id])
       @appointment = current_user.appointments.new(appoint_params)
       @appointment.girlfriend = @girlfriend
-      if @appointment.save
-        redirect_to account_appointments_path
-      else
+
+      if @girlfriend.appointments.pluck(:appointment_on).select { |appointment| appointment == Date.new(date[:year], date[:month], date[:day]) }.size > 0
+
+        flash[:alert] = "I am not available honey, pick me another night!"
         render :new
+
+
+      else
+        @appointment.save
+
+        redirect_to account_dashboard_path
       end
     end
 

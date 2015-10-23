@@ -1,12 +1,15 @@
 
 
 <div class="container">
+
   <div class="row col-sm-12 col-md-6 text-center">
     <ul style="list-style: none;">
+
       <li> <h4> Hello my name is  <strong><%= @girlfriend.name %></strong> </h4></li>
+      <li><h4><%= @girlfriend.age %> years old </h4></li>
+
       <li><%= @girlfriend.description %></li>
-      <li><%= @girlfriend.price %> dollars </li>
-      <li><%= @girlfriend.age %> years old </li>
+      <li><%= @girlfriend.price %> € </li>
       <li><%= @girlfriend.city %></li>
       <li><%= @girlfriend.street %></li>
       <li><%= @girlfriend.availability %></li>
@@ -16,6 +19,9 @@
     </ul>
   </div>
 
+
+
+
   <div class="col-sm-12 col-md-6 text-center">
     <h2> Do you want to date ? </h2>
     <%= simple_form_for([:account, @girlfriend, @appointment], html: { multipart: true }) do |f| %>
@@ -23,7 +29,12 @@
     <%= f.input :appointment_on %>
     <%= f.button :submit %>
     <% end %>
+
+   <h2><strong><%= alert %></strong></h2>
+
+
   </div>
+
 
 </div>
 
