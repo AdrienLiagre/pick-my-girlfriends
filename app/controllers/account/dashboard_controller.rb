@@ -1,7 +1,7 @@
 module Account
   class DashboardController < ApplicationController
     def show
-      @appointments = Appointment.all
+      @appointments = current_user.appointments
     end
   end
 end

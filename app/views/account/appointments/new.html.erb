@@ -9,6 +9,8 @@
       <li><%= @girlfriend.age %> years old </li>
       <li><%= @girlfriend.city %></li>
       <li><%= @girlfriend.street %></li>
+      <li><%= @girlfriend.availability %></li>
+      <li><%= @girlfriend.nationality %></li>
       <li><%= @girlfriend.job %></li>
       <li><%= image_tag @girlfriend.picture (:medium) %></li>
     </ul>
@@ -21,7 +23,8 @@
     <%= f.input :appointment_on %>
     <%= f.button :submit %>
     <% end %>
-</div>
+  </div>
+
 </div>
 
 

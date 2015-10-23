@@ -28,20 +28,9 @@
             <li><%= appointment.appointment_on %></li>
             <li> With <%= appointment.girlfriend.name %> </li>
             <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
+            <%= link_to "Delete this appointment", account_appointment_path(appointment), method: :delete, class: "btn btn-warning"  %>
             </ul>
         <% end %>
       <% end %>
-
-      <li style="list-style: none;"><h1>My past appointments</h1></li>
-        <% @appointments.each do |appointment| %>
-        <% if appointment.appointment_on < Time.now %>
-          <ul style="list-style: none;">
-            <li><%= appointment.appointment_on %></li>
-            <li> With <%= appointment.girlfriend.name %> </li>
-            <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
-          </ul>
-        <% end %>
-        <% end %>
-
   </div>
 </div>
