@@ -2,20 +2,25 @@
   <div class="row">
     <div class="text-center">
       <div class="col-md-6">
-        <h1><%= current_user.email %></h1>
+        <h1> Welcome <%= current_user.email %></h1>
         <%= image_tag current_user.picture %>
       </div>
+      <br>
+      <br>
       <div class="col-md-6">
-        <div class="card"> <%= link_to "Your girls", account_girlfriends_path %> </div>
-        <div class="card"> <%= link_to "Add a girl", new_account_girlfriend_path %> </div>
-        <div class="card"> <%= link_to "List all the girls", girlfriends_path %> </div>
+        <br>
+        <p><%= link_to "Your girls", account_girlfriends_path, class: "navbar-wagon-button btn" %></p>
+        <br>
+        <p><%= link_to "Add a girl", new_account_girlfriend_path, class: "navbar-wagon-button btn" %></p>
+        <br>
+        <p><%= link_to "List all the girls", girlfriends_path, class: "navbar-wagon-button btn" %></p>
 
       </div>
     </div>
   </div>
 </div>
 
-
+<hr>
 
 <div class="container text-center">
   <div class="row">
@@ -23,14 +28,18 @@
      <li><h1>My next appointments</h1></li>
     </ul>
       <% @appointments.each do |appointment| %>
-        <% if appointment.appointment_on > Time.now %>
-          <ul style="list-style: none;">
-            <li><%= appointment.appointment_on %></li>
-            <li> With <%= appointment.girlfriend.name %> </li>
-            <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
-            <%= link_to "Delete this appointment", account_appointment_path(appointment), method: :delete, class: "btn btn-warning"  %>
-            </ul>
-        <% end %>
+        <div class="container">
+          <div class="col-md-6 col-lg-4">
+            <% if appointment.appointment_on > Time.now %>
+              <ul style="list-style: none;">
+                <li><%= appointment.appointment_on %></li>
+                <li> With <%= appointment.girlfriend.name %> </li>
+                <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
+                <%= link_to "Delete this appointment", account_appointment_path(appointment), method: :delete, class: "btn btn-warning"  %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
       <% end %>
   </div>
 </div>
