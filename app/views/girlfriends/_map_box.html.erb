@@ -1,5 +1,13 @@
 <div class="map_box">
   <h3><%= girlfriend.name %></h3>
   <p><%= girlfriend.street %></p>
-  <%= link_to "Wanna meet?", girlfriend, class: "btn" %>
+  <% if user_signed_in? %>
+    <% if current_user.id == girlfriend.pimp_id %>
+      <%= link_to 'Wanna meet?', account_girlfriend_path(girlfriend), class: "btn" %>
+    <% else %>
+      <%= link_to 'Wanna meet?', new_account_girlfriend_appointment_path(girlfriend), class: "btn" %>
+    <% end %>
+  <% else %>
+    <%= link_to 'Wanna meet?', root_path, class: "btn" %>
+  <% end %>
 </div>
