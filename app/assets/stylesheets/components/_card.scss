@@ -13,12 +13,19 @@
   background-size: cover;
 }
 
+.card-teaser {
+  position: relative;
+  height: 80px;
+  margin: 10px 0;
+  width: 400px;
+}
+
 .card-description,
 .card-text,
 .card-user {
   position: absolute;
   z-index: 1;
-  color: white;
+  color: black;
 }
 
 .card-text {
