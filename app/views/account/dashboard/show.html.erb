@@ -27,19 +27,19 @@
     <ul style="list-style: none;">
      <li><h1>My next appointments</h1></li>
     </ul>
-      <% @appointments.each do |appointment| %>
-        <div class="container">
+      <div class="container">
+        <% @appointments.each do |appointment| %>
           <div class="col-md-6 col-lg-4">
             <% if appointment.appointment_on > Time.now %>
               <ul style="list-style: none;">
                 <li><%= appointment.appointment_on %></li>
                 <li> With <%= appointment.girlfriend.name %> </li>
                 <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
-                <%= link_to "Delete this appointment", account_appointment_path(appointment), method: :delete, class: "btn btn-warning"  %>
+                <%= link_to "Delete this appointment", account_appointment_path(appointment), method: :delete, class: "navbar-wagon-button btn"  %>
               </ul>
             <% end %>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
   </div>
 </div>
