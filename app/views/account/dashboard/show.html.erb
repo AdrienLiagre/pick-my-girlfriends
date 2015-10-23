@@ -20,20 +20,28 @@
 <div class="container text-center">
   <div class="row">
     <ul style="list-style: none;">
-    <li><h1>My appointments</h1></li>
+     <li><h1>My next appointments</h1></li>
     </ul>
       <% @appointments.each do |appointment| %>
-      <ul style="list-style: none;">
-      <li><%= appointment.appointment_on %></li>
-      <li> With <%= appointment.girlfriend.name %> </li>
-      <li><p> <%= link_to 'Check her profile again !', girlfriend_path(appointment.girlfriend) %></li>
-    </ul>
-  <% end %>
-</div>
+        <% if appointment.appointment_on > Time.now %>
+          <ul style="list-style: none;">
+            <li><%= appointment.appointment_on %></li>
+            <li> With <%= appointment.girlfriend.name %> </li>
+            <li><p> <%= link_to 'Check her profile again !', account_girlfriend_path(appointment.girlfriend) %></li>
+            </ul>
+        <% end %>
+      <% end %>
 
-
-
-
+      <li style="list-style: none;"><h1>My past appointments</h1></li>
+        <% @appointments.each do |appointment| %>
+        <% if appointment.appointment_on < Time.now %>
+          <ul style="list-style: none;">
+            <li><%= appointment.appointment_on %></li>
+            <li> With <%= appointment.girlfriend.name %> </li>
+            <li><p> <%= link_to 'Check her profile again !', account_girlfriend_path(appointment.girlfriend) %></li>
+          </ul>
+        <% end %>
+        <% end %>
 
   </div>
 </div>
