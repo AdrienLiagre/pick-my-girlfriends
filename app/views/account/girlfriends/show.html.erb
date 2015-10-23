@@ -1,28 +1,50 @@
-<div class="container">
-  <div class="row col-sm-12 col-md-6 text-center">
+<br>
+<br>
+<br>
+
+<div class="container card">
+
+  <div class="row col-xs-12 col-md-4 text-center">
+    <li><%= image_tag @girlfriend.picture (:medium) %></li>
+  </div>
+
+  <div class="row col-xs-12 col-md-4 text-center">
 
     <ul style="list-style: none;">
-      <li><strong><%= @girlfriend.name %></strong></li>
+      <li><h1><%= @girlfriend.name %></h1></li>
+      <li><h2><%= @girlfriend.age %> years old </h2></li>
       <li><%= @girlfriend.description %></li>
-      <li><%= @girlfriend.price %> dollars </li>
-      <li><%= @girlfriend.age %> years old </li>
+      <li><%= @girlfriend.price %> € </li>
       <li><%= @girlfriend.city %></li>
       <li><%= @girlfriend.street %></li>
       <li><%= @girlfriend.postcode %></li>
-      <li><%= @girlfriend.availability %></li>
-      <li><%= @girlfriend.nationality %></li>
-      <li><%= @girlfriend.job %></li>
-      <li><%= image_tag @girlfriend.picture (:medium) %></li>
+
+      <li><% if @girlfriend.availability %>
+            <p> Available ! <p>
+          <% else %>
+            <p> Not available ! </p>
+          <% end %>
+      </li>
+      <li><%= @girlfriend.nationality %> et <%= @girlfriend.job %></li>
     </ul>
   </div>
 
-  <div class="row col-sm-12 col-md-6 text-center">
+  <div class="row col-xs-12 col-md-4 text-center">
     <br>
     <br>
     <br>
+    <%= link_to "delete this girl", account_girlfriend_path, method: :delete, class: "btn navbar-wagon-button"  %>
     <br>
-    <%= link_to "delete this girl", account_girlfriend_path, method: :delete, class: "btn btn-warning"  %>
-    <%= link_to "back to profile", account_dashboard_path, class: "btn btn-warning"  %>
+    <br>
+    <%= link_to "back to profile", account_dashboard_path, class: "btn navbar-wagon-button"  %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row text-center">
+    <div class="map-show col-xs-12">
+      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=14&size=2000x200&sensor=false&maptype=roadmap&markers=color:red|#{@girlfriend.city}", class: "img-responsive center-block" %>
+    </div>
   </div>
 </div>
 
