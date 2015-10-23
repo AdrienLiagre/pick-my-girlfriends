@@ -16,6 +16,11 @@
       <li><%= @girlfriend.job %></li>
   <br>
 
+      <% if @girlfriend.availability == true %>
+      <%= link_to "book me", new_account_girlfriend_appointment_path(@girlfriend), class: "btn btn-danger btn-lg"  %>
+      <% else %>
+      <h2> I am busy this night, please change the date </h2>
+      <% end %>
 
 
 
