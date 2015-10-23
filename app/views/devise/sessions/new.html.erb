@@ -44,14 +44,12 @@
         <br>
         <div class="row">
           <div class="col-sm-offset-2">
-            <ul class="list-inline text-center avatars">
+            <ul class="list-inline avatars">
               <div class="card-teaser" >
-                <li class="avatar">
-                  <div class="icon-badge-container">
-                  <p><%= image_tag "girlfriend.picture", class: "img-circle" %></p>
-                  </div>
+                <li>
+                  <h3> <%= image_tag girlfriend.picture, class: "img-circle avatar" %>
+                  <%= girlfriend.name %> - <%= girlfriend.city %> </h3>
                 </li>
-                <h3><%= girlfriend.name %> - <%= girlfriend.city %></h3>
               </div>
             </ul>
           </div>
@@ -69,8 +67,10 @@
       <p> Check out all the available girlfriends, and book them for an amazing evening and a hole new experience.</p>
       <p> All our girlfriends are CIA and NASA approved (des vrais avions quoi). Stop hesitating and bring it on ! </p>
   </div>
-  <div class="col-sm-12 col-md-6">
-    <p> <%= image_tag 'homemannequin.png', size: '440x400' %></p>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <p> <%= image_tag 'homemannequin.png', size: '440x400' %></p>
+    </div>
   </div>
 </div>
 
