@@ -2,7 +2,11 @@ class GirlfriendsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @girlfriends = Girlfriend.all
+    if params[:user_input_city]
+      @girlfriends = Girlfriend.near(params[:user_input_city], 3)
+    else
+      @girlfriends = Girlfriend.all
+    end
 
     @hash = Gmaps4rails.build_markers(@girlfriends) do |girlfriend, marker|
       marker.lat girlfriend.latitude

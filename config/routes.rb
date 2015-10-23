@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     end
     resources :appointments, only: [:index, :show, :new, :create, :destroy]
   end
+
 end

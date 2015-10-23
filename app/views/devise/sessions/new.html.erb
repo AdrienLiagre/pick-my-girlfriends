@@ -4,6 +4,15 @@
   <div class="content text-center" data-sr='enter top'>
     <h1> Pick your girl </h1>
     <h3> Welcome to our cheaters community </h3>
+
+    <div class="form-group text-center">
+        <div class="container">
+          <%= form_tag("/girlfriends", method: "get") do %>
+            <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'Where do you want company?' %>
+            <%= submit_tag "Search", class: 'btn navbar-wagon-button' %>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
 
