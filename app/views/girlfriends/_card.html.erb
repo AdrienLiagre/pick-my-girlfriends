@@ -10,11 +10,11 @@
 
   <% if user_signed_in? %>
     <% if current_user.id == girlfriend.pimp_id %>
-    <%= link_to '', account_girlfriend_path(girlfriend), class: "card-link" %>
+      <%= link_to '', account_girlfriend_path(girlfriend), class: "card-link" %>
     <% else %>
-    <%= link_to '', girlfriend_path(girlfriend), class: "card-link" %>
+      <%= link_to '', new_account_girlfriend_appointment_path(girlfriend), class: "card-link" %>
     <% end %>
   <% else %>
-    <%= link_to '', girlfriend_path(girlfriend), class: "card-link" %>
+    <%= link_to '', root_path, class: "card-link" %>
   <% end %>
 </div>

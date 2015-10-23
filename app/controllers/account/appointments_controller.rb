@@ -25,7 +25,7 @@ module Account
     def destroy
       @appointment = current_user.appointments.find(params[:id])
       @appointment.destroy
-      redirect_to root_path
+      redirect_to account_dashboard_path
     end
 
   private
