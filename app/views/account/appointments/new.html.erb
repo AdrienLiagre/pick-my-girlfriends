@@ -2,24 +2,22 @@
 
 <div class="container">
 
-  <div class="row col-sm-12 col-md-6 text-center">
-    <ul style="list-style: none;">
+  <div class="col-sm-12 col-md-6 text-center">
       <div class="header-new-livraison">
-        <li> <strong><%= @girlfriend.name %></strong> </li>
+         <strong><%= @girlfriend.name %></strong>
       </div>
 
     <div class="list-product">
-      <div class="left-position">
-      <li><%= @girlfriend.description %></li>
-      <li><%= @girlfriend.city %></li>
-      <li><%= @girlfriend.street %></li>
-      </div>
-      <li><%= image_tag @girlfriend.picture (:medium) %></li>
+      <%= @girlfriend.description %>
+      <br>
+      <%= image_tag @girlfriend.picture (:medium) %></li>
     </div>
 
     <br>
       <div class="price">
-        <li><%= @girlfriend.price %> € </li>
+      <%= @girlfriend.price %> €
+      <br>
+      Production habitant à <%= @girlfriend.city %>
       </div>
     </ul>
   </div>

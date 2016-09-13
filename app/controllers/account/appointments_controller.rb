@@ -22,7 +22,7 @@ module Account
 
       if @girlfriend.appointments.pluck(:appointment_on).select { |appointment| appointment == Date.new(date[:year], date[:month], date[:day]) }.size > 0
 
-        flash[:alert] = "I am not available honey, pick me another night!"
+        flash[:alert] = "No more availability for this day"
         render :new
 
 
