@@ -1,8 +1,8 @@
 
 <% if params[:user_input_city] %>
-  <h1 class="text-center"> Girlfriends in <%= params[:user_input_city] %> </h1>
+  <h1 class="text-center"> Baskets in <%= params[:user_input_city] %> </h1>
 <% else %>
-  <h1 class="text-center"> Your potential girlfriends </h1>
+  <h1 class="text-center"> Our baskets </h1>
 <% end %>
 
 
@@ -17,6 +17,7 @@
   <div class="container">
     <% @girlfriends.each do |girlfriend| %>
       <div class="col-xs-12 col-sm-4">
+      <h3> The student basket</h3>
       <%= render "girlfriends/card", girlfriend: girlfriend %>
       </div>
     <% end %>

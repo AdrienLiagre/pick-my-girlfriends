@@ -4,18 +4,23 @@
 
   <div class="row col-sm-12 col-md-6 text-center">
     <ul style="list-style: none;">
+      <div class="header-new-livraison">
+        <li> <strong><%= @girlfriend.name %></strong> </li>
+      </div>
 
-      <li> <h4> Hello my name is  <strong><%= @girlfriend.name %></strong> </h4></li>
-      <li><h4><%= @girlfriend.age %> years old </h4></li>
-
+    <div class="list-product">
+      <div class="left-position">
       <li><%= @girlfriend.description %></li>
-      <li><%= @girlfriend.price %> € </li>
       <li><%= @girlfriend.city %></li>
       <li><%= @girlfriend.street %></li>
-      <li><%= @girlfriend.availability %></li>
-      <li><%= @girlfriend.nationality %></li>
-      <li><%= @girlfriend.job %></li>
+      </div>
       <li><%= image_tag @girlfriend.picture (:medium) %></li>
+    </div>
+
+    <br>
+      <div class="price">
+        <li><%= @girlfriend.price %> € </li>
+      </div>
     </ul>
   </div>
 
@@ -23,7 +28,9 @@
 
 
   <div class="col-sm-12 col-md-6 text-center">
-    <h2> Do you want to date ? </h2>
+    <div class="header-new-livraison">
+      <h2> When do you want this basket ? </h2>
+    </div>
     <%= simple_form_for([:account, @girlfriend, @appointment], html: { multipart: true }) do |f| %>
     <%= f.error_notification %>
     <%= f.input :appointment_on %>
