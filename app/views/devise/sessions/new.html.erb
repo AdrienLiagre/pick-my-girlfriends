@@ -2,15 +2,15 @@
 <div class="banner">
   <div class="banner-shadow"></div>
   <div class="content text-center" data-sr='enter top'>
-    <h1> Pick your basket </h1>
-    <h3> Welcome to our local community of farmers </h3>
+    <h1> The Organic Community </h1>
+    <h3> Pick your fresh basket </h3>
 
     <div class="form-group text-center">
       <div class="container">
         <div class="row">
           <div class="col-sm-4 col-sm-offset-4">
             <%= form_tag("/girlfriends", method: "get") do %>
-              <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'Where do you want company?' %>
+              <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'City' %>
               <%= submit_tag "Search", class: 'btn navbar-wagon-button' %>
             <% end %>
           </div>
@@ -63,8 +63,10 @@
 
 <div class="container">
   <div class="col-sm-12 col-md-6">
-    <h1> Do you want to eat some fresh organic food on a daily basis ? </h1>
-      <p> Check out all our local farmers, and have the food delived after 5pm them for an amazing dinner and a all new experience.</p>
+    <div class="text-center">
+      <h1> Do you want to eat some fresh organic food on a daily basis ? </h1>
+    </div>
+      <p> Check out all our local farmers, and have the food delived before 5pm them for an amazing dinner and a all new experience.</p>
       <p> All our farmers are CIA and NASA approved (some reals cawboys of substainable develpment). Stop eating junk food and bring it on ! </p>
   </div>
     <div class="embed-container col-sm-6 col-md-6">
@@ -78,10 +80,13 @@
 
 <div class="container">
   <div class="col-sm-12 col-md-6">
-    <p> <%= image_tag 'basket.jpeg', class: 'img-responsive' %></p>
   </div>
   <div class="col-sm-12 col-md-6">
-    <h1> Spread the tomatoes </h1>
+    <div class="text-center">
+      <h1> Spread the tomatoes </h1>
+    </div>
       <p> If your appetetite grew and you want save the planet, you can speak about us and even become a local farmer. It's easy money, with just some seeds and compost. </p>
+          <p> <%= image_tag 'basket.jpeg', class: 'img-responsive' %></p>
+
   </div>
 </div>
