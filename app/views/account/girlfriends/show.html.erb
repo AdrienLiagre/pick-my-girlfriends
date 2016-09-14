@@ -12,7 +12,6 @@
 
     <ul style="list-style: none;">
       <li><h1><%= @girlfriend.name %></h1></li>
-      <li><h2><%= @girlfriend.age %> years old </h2></li>
       <li><%= @girlfriend.description %></li>
       <li><%= @girlfriend.price %> € </li>
       <li><%= @girlfriend.city %></li>
@@ -25,7 +24,6 @@
             <p> Not available ! </p>
           <% end %>
       </li>
-      <li><%= @girlfriend.nationality %> et <%= @girlfriend.job %></li>
     </ul>
   </div>
 
@@ -33,7 +31,7 @@
     <br>
     <br>
     <br>
-    <%= link_to "delete this girl", account_girlfriend_path, method: :delete, class: "btn navbar-wagon-button"  %>
+    <%= link_to "delete this basket", account_girlfriend_path, method: :delete, class: "btn navbar-wagon-button"  %>
     <br>
     <br>
     <%= link_to "back to profile", account_dashboard_path, class: "btn navbar-wagon-button"  %>
@@ -43,7 +41,7 @@
 <div class="container">
   <div class="row text-center">
     <div class="map-show col-xs-12">
-      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=14&size=2000x200&sensor=false&maptype=roadmap&markers=color:red|#{@girlfriend.full_address}", class: "img-responsive center-block" %>
+
     </div>
   </div>
 </div>

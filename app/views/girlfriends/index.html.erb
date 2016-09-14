@@ -1,15 +1,15 @@
 
 <% if params[:user_input_city] %>
-  <h1 class="text-center"> Girlfriends in <%= params[:user_input_city] %> </h1>
+  <h1 class="text-center"> Chefs in <%= params[:user_input_city] %> </h1>
 <% else %>
-  <h1 class="text-center"> Your potential girlfriends </h1>
+  <h1 class="text-center"> Our Chefs </h1>
 <% end %>
 
 
   <div class="form-group text-center">
     <div class="container">
       <%= form_tag("/girlfriends", method: "get") do %>
-        <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'Where do you want company?' %>
+        <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'Look for another location?' %>
       <% end %>
     </div>
   </div>

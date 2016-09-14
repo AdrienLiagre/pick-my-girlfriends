@@ -2,15 +2,15 @@
 <div class="banner">
   <div class="banner-shadow"></div>
   <div class="content text-center" data-sr='enter top'>
-    <h1> Pick your girl </h1>
-    <h3> Welcome to our cheaters community </h3>
+    <h1> ChefBnb </h1>
+    <h3> Pick your chef </h3>
 
     <div class="form-group text-center">
       <div class="container">
         <div class="row">
           <div class="col-sm-4 col-sm-offset-4">
             <%= form_tag("/girlfriends", method: "get") do %>
-              <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'Where do you want company?' %>
+              <%= text_field_tag :city, nil, class: "form-control", name: "user_input_city", id: "user_input_city", placeholder: 'City' %>
               <%= submit_tag "Search", class: 'btn navbar-wagon-button' %>
             <% end %>
           </div>
@@ -48,7 +48,7 @@
               <div class="card-teaser" >
                 <li>
                   <h3> <%= image_tag girlfriend.picture, class: "img-circle avatar" %>
-                  <%= girlfriend.name %> - <%= girlfriend.city %> </h3>
+                  <%= girlfriend.name %> </h3>
                 </li>
               </div>
             </ul>
@@ -63,25 +63,27 @@
 
 <div class="container">
   <div class="col-sm-12 col-md-6">
-    <h1> Do you want her to have dinner with you tonight ? </h1>
-      <p> Check out all the available girlfriends, and book them for an amazing evening and a hole new experience.</p>
-      <p> All our girlfriends are CIA and NASA approved (des vrais avions quoi). Stop hesitating and bring it on ! </p>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <p> <%= image_tag 'homemannequin.png', size: '440x400' %></p>
+    <div class="text-center">
+      <h1> Do you want to learn cooking some fresh organic food with an awesome Chef?  </h1>
     </div>
+      <p> Check out all our chef and their recipee. It's a unique experience for all the food lovers  </p>
+      <p> All our Chef are CIA and NASA approved (The real cawboys of gastronomy). Stop eating junk food and bring it on! </p>
   </div>
+    <div class="embed-container col-sm-6 col-md-6">
+      <iframe width="560" height="349" src="http://www.youtube.com/embed/e3YF2GA2YtQ">
+        <html lang="en" dir="ltr">
+      </iframe>
+    </div>
 </div>
 
 <br>
 
 <div class="container">
-  <div class="col-sm-12 col-md-6">
-    <p> <%= image_tag 'homeshare.jpg', size: '440x256' %></p>
-  </div>
-  <div class="col-sm-12 col-md-6">
-    <h1> Share the love </h1>
-      <p> If your girl friends are bored as well and wouldn't mind meeting new handsome people, just add theto the global offer. It's easy money, with professional services and insurance against jerks. </p>
-  </div>
+    <div class="text-center">
+      <h1> Organic food certified </h1>
+    </div>
+    <div class="text-center">
+      <p> We make sure than the products the chef uses to cook come from local farmers and are organic. Our purpose is to enhance the cooking experience while acting for substainability </p>
+          <p> <%= image_tag 'basket.jpeg', class: 'img-responsive' %></p>
+    </div>
 </div>

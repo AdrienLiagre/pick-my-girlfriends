@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="row col-sm-12 col-md-6 offset-3">
-  <h1> You just reserve you new appointment with <%= @appointments.last.girlfriend.name %></h1>
+  <h1> You just reserve you new chef for <%= @appointments.last.girlfriend.name %></h1>
   <h3><%= @appointments.last.appointment_on %></h3>
 
 </div>
@@ -12,5 +12,5 @@
   </div>
 </div>
 <div class="text-center">
-  <p> <%= link_to 'View all your appointments !', account_dashboard_path %></p>
+  <p> <%= link_to 'View all your delivery !', account_dashboard_path %></p>
 </div>
