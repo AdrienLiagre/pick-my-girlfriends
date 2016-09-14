@@ -7,7 +7,7 @@
       </div>
       <br>
 
-        <p><%= link_to "Add a basket", new_account_girlfriend_path, class: "navbar-wagon-button btn" %></p>
+        <p><%= link_to "Add a lesson", new_account_girlfriend_path, class: "navbar-wagon-button btn" %></p>
         <br>
       <br>
 
@@ -19,7 +19,7 @@
 
 <div class="container text-center">
   <div class="row">
-    <h1>Your next deliveries</h1>
+    <h1>Your next cooking experiences</h1>
      <br>
       <br>
        <br>
@@ -33,7 +33,7 @@
                 <br>
                 For <%= appointment.girlfriend.name %>
                 <br>
-                <%= link_to "Delete this delivery", account_appointment_path(appointment), method: :delete, class: "navbar-wagon-button btn"  %>
+                <%= link_to "Delete this experience", account_appointment_path(appointment), method: :delete, class: "navbar-wagon-button btn"  %>
                 </div>
                <br>
                <br>

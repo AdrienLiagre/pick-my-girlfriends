@@ -17,7 +17,7 @@
       <div class="price">
       <%= @girlfriend.price %> €
       <br>
-      Producteur habitant à <%= @girlfriend.city %>
+      Chef habitant à <%= @girlfriend.city %>
       </div>
     </ul>
   </div>
@@ -27,12 +27,12 @@
 
   <div class="col-sm-12 col-md-6 text-center">
     <div class="header-new-livraison">
-      <h2> When do you want this basket ? </h2>
+      <h2> When do you want to cook with this chef ? </h2>
     </div>
     <%= simple_form_for([:account, @girlfriend, @appointment], html: { multipart: true }) do |f| %>
     <%= f.error_notification %>
-    <%= f.input :appointment_on, :label => "Delivery day"  %>
-    <%= f.button :submit, "Order" %>
+    <%= f.input :appointment_on, :label => "Pick a day"  %>
+    <%= f.button :submit, "Start cooking!" %>
     <% end %>
 
    <h2><strong><%= alert %></strong></h2>
