@@ -17,7 +17,6 @@
   <div class="container">
     <% @girlfriends.each do |girlfriend| %>
       <div class="col-xs-12 col-sm-4">
-      <h3> The student basket</h3>
       <%= render "girlfriends/card", girlfriend: girlfriend %>
       </div>
     <% end %>
